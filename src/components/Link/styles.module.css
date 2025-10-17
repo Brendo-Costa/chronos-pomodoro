@@ -1,13 +1,4 @@
-.menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1.4rem;
-    margin: 4rem;
-}
-
-.menu-link {
+.link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,13 +9,4 @@
     transition: all 0.3s ease-in-out;
     padding: 1.5rem;
     border-radius: 0.8rem;
-}
-
-.menu-link:hover {
-    filter: brightness(80%)
-}
-
-.menu-link svg {
-    width: 2.4rem;
-    height: 2.4rem;
 }

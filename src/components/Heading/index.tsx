@@ -2,7 +2,7 @@ import type React from 'react';
 import styles from './styles.module.css';
 
 type HeadingProps = {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 export function Heading({ children } : HeadingProps) {
