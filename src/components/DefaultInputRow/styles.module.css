@@ -1,0 +1,8 @@
+.formRow{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinhamento Vertical */
+  align-items: center; /* Alinhamento  Horizontal*/
+  gap: 2.4rem;
+}
