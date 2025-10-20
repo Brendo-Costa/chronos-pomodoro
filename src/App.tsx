@@ -13,55 +13,71 @@ import { Footer } from './components/Footer';
 
 import './styles/global.css';
 import './styles/theme.css';
-
+import { Heading } from './components/Heading';
+import { useState } from 'react'; 
 
 export function App(){
-    return (
-        <>
-            <Container>
-                <Logo />
-            </Container>
 
-            <Container>
-                <Menu />
-            </Container>
+  const [numero, setNumero]= useState(0);
 
-            <Container>
-                <CountDown />
-            </Container>
+  function handleClick() {
+    setNumero(prevState => prevState+1);
+  }
+  
+  return (
+    <>
+      <Heading>
+        Número: {numero}
+        <button onClick={handleClick}>Aumentar</button>
+      </Heading>
+      <Container>
+          <Logo />
+      </Container>
 
-            <Container>
-              <form className='form' action="">
-                
-                <DefaultInputRow>
-                  <DefaultInput 
-                    id='meuInput'
-                    type='text' 
-                    labelText='Task'
-                    placeholder='Digite sua task aqui!!!'
-                  /> 
-                </DefaultInputRow>
+      <Container>
+          <Menu />
+      </Container>
 
-                <div className='formRow'>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                
-                <DefaultInputRow>
-                  <Cycles />
-                </DefaultInputRow>
+      <Container>
+          <CountDown />
+      </Container>
 
-                <DefaultInputRow>
-                  <DefaultButton status='start'>
-                    <PlayCircleIcon/>
-                  </DefaultButton>
-                </DefaultInputRow>
+      <Container>
+        <form className='form' action="">
+          
+          <DefaultInputRow>
+            <DefaultInput 
+              id='meuInput'
+              type='text' 
+              labelText={numero.toString()}
+              placeholder='Digite sua task aqui!!!'
+            /> 
+          </DefaultInputRow>
 
-              </form>
-            </Container>
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          
+          <DefaultInputRow>
+            <Cycles />
+          </DefaultInputRow>
 
-            <Container>
-                <Footer />
-            </Container>
-        </>
-    )
+          <DefaultInputRow>
+            <DefaultButton status='start'>
+              <PlayCircleIcon/>
+            </DefaultButton>
+          </DefaultInputRow>
+
+        </form>
+      </Container>
+
+      <Container>
+          <Footer />
+      </Container>
+
+      <Container>
+        algo
+      </Container>
+    </>
+  )
 }
